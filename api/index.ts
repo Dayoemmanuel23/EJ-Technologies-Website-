@@ -7,7 +7,7 @@ import joi from 'joi';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 
-dotenv.config({ path: '.env.local' });
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
