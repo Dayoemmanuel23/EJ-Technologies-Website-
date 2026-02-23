@@ -18,7 +18,7 @@ const Contact = mongoose.models.Contact || mongoose.model('Contact', new mongoos
   createdAt: { type: Date, default: Date.now }
 }));
 
-const sanitizeInput = (obj: any): any => {
+const sanitizeInput = (obj) => {
   if (typeof obj !== 'object' || obj === null) return obj;
   const clean = Array.isArray(obj) ? [] : {};
   for (const key in obj) {
@@ -34,7 +34,7 @@ const connectDB = async () => {
   await mongoose.connect(process.env.MONGODB_URI || '');
 };
 
-export default async function handler(req: any, res: any) {
+export default async (req, res) => {
   await connectDB();
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -44,7 +44,7 @@ export default async function handler(req: any, res: any) {
   if (error) {
     return res.status(400).json({
       error: 'Validation Error',
-      details: error.details.map((d: any) => d.message)
+      details: error.details.map((d) => d.message)
     });
   }
   try {
@@ -54,4 +54,4 @@ export default async function handler(req: any, res: any) {
   } catch (err) {
     res.status(500).json({ error: 'Internal Server Error' });
   }
-}
+};
