@@ -1,6 +1,8 @@
 export default (req, res) => {
   if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    res.setHeader('Content-Type', 'text/plain');
+    return res.status(405).end('Method not allowed');
   }
-  res.status(200).json({ status: 'Server is running' });
+  res.setHeader('Content-Type', 'text/html');
+  res.status(200).end('<h2>✅ Server is running</h2>');
 };
