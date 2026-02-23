@@ -44,7 +44,7 @@ const CorporateServicesPage: React.FC = () => {
             "Incorporated Trustees (NGO)",
             "Post-Incorporation Services"
           ]}
-          image="/Images/advert.jpeg"
+          image="/advert.jpeg"
         />
 
         <StorySection
@@ -61,7 +61,7 @@ const CorporateServicesPage: React.FC = () => {
             "Tax Audit Representation",
             "Regulatory Advisory"
           ]}
-          image="/Images/tax.png"
+          image="/tax.png"
         />
       </main>
       <Footer />

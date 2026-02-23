@@ -67,13 +67,13 @@ const SolarPage: React.FC = () => {
                 <div className="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-brand-green/20 bg-brand-green/5">
                   <div className="flex gap-4 p-4">
                   <img 
-                    src="/Images/Solar.jpeg" 
+                    src="/Solar.jpeg" 
                     alt="Solar Installation" 
                     className="flex-1 h-auto object-contain rounded-lg transition-transform duration-700 hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
                   <img 
-                    src="/Images/Solar1.jpeg" 
+                    src="/Solar1.jpeg" 
                     alt="Solar Installation 2" 
                     className="flex-1 h-auto object-contain rounded-lg transition-transform duration-700 hover:scale-105"
                     referrerPolicy="no-referrer"

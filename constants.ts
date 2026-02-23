@@ -46,7 +46,7 @@ export const TECH_SERVICES: ServiceItem[] = [
     icon: Code,
     colorTheme: 'blue',
     features: ['Enterprise ERP', 'SaaS Platforms', 'Cloud Solutions'],
-    imageUrl: '/Images/software.png'
+    imageUrl: '/software.png'
   },
   {
     id: 'web-apps',
@@ -113,7 +113,7 @@ export const CORPORATE_SERVICES: ServiceItem[] = [
     icon: FileCheck,
     colorTheme: 'green',
     features: ['Business Name', 'Company (LTD)', 'NGO/Incorporated Trustees', 'Post-Incorporation'],
-    imageUrl: '/Images/advert.jpeg'
+    imageUrl: '/advert.jpeg'
   },
   {
     id: 'tax-consultancy',

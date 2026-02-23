@@ -48,7 +48,7 @@ const TechnologyServicesPage: React.FC = () => {
               "API Integration & Development",
               "Legacy System Modernization"
             ]}
-            image="/Images/software.png"
+            image="/software.png"
           />
         </div>
 
@@ -114,7 +114,7 @@ const TechnologyServicesPage: React.FC = () => {
               "Marketing Collateral",
               "Brand Strategy Guidelines"
             ]}
-            image="/Images/Brand1.png"
+            image="/Brand1.png"
           />
         </div>
       </main>
