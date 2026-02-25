@@ -22,7 +22,15 @@ const connectDB = async () => {
 };
 
 export default async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://api.ejtechnologies.com.ng');
+  const allowedOrigins = [
+    'https://api.ejtechnologies.com.ng',
+    'https://ejtechnologies.com.ng',
+    'http://ejtechnologies.com.ng'
+  ];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') {
