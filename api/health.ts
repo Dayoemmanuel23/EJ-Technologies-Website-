@@ -1,4 +1,7 @@
 export default (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://ejtechnologies.com.ng');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method !== 'GET') {
     res.setHeader('Content-Type', 'text/plain');
     return res.status(405).end('Method not allowed');
