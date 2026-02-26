@@ -3,8 +3,8 @@ import joi from 'joi';
 
 const contactValidation = joi.object({
   name: joi.string().trim().min(2).max(100).pattern(/^[a-zA-Z\-']+(?: [a-zA-Z\-']+)*/).required(),
-  email: joi.string().trim().email().max(255).required(),
-  phone: joi.string().trim().pattern(/^[0-9]+$/).min(10).max(15).required(),
+  email: joi.string().trim().pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/).max(255).required(),
+  phone: joi.string().trim().pattern(/^\+?[0-9]+$/).min(10).max(15).required(),
   service: joi.string().required(),
   message: joi.string().trim().min(10).max(1000).custom((value, helpers) => {
     const suspicious = /[{};=]|<script|function|\b(alias|resolve|path)\b/i;
